@@ -9,7 +9,7 @@ end
 def valid_move?(board, index)
   if (board[index] == "X" || board[index] == "O" || index > 8 || index < 0 || position_taken?(board, index))
     return false
-  elsif (!position_taken?(board,index))
+  else
     return true
   end
 end
@@ -34,8 +34,7 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  index = gets.strip
-  num = input_to_index(index)
+  num = input_to_index(gets.strip)
   if (num < 9 && num >= 0)
       move(board, num)
       display_board(board)
