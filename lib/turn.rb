@@ -9,11 +9,7 @@ end
 def valid_move?(board, index)
   if (board[index] == "X" || board[index] == "O" || index > 8 || index < 0 || position_taken?(board, index))
     return false
-<<<<<<< HEAD
   else
-=======
-  elsif (!position_taken?(board,index))
->>>>>>> e1945ca748556b9dcd37c1747033af424a5aa73a
     return true
   end
 end
